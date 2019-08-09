@@ -1,0 +1,29 @@
+<p>studentlist works!</p>
+<h1>Student list:::</h1>
+<h1>Heading Normal</h1>
+<div class="container">
+    <table class="table table-responsive">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Mobile</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.mobile}}</td>
+            <td>{{student.address}}</td>
+            <td><button (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button></td>
+            <td><button (click)="updateStudent(student)" class="btn btn-danger">Update</button></td>
+            
+            
+        </tr> 
+    </table>
+    <!--Sorting experiment ends-->
+    
+</div>
